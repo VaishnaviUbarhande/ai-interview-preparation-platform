@@ -1,93 +1,249 @@
-🎯 AI Interview Preparation Platform
+ <div align="center">
 
-A web app that helps students and job seekers prepare for interviews using AI. Paste a job description, upload your resume, and get a personalised interview plan in about 30 seconds.
+# 🎯 AI Interview Preparation Platform
 
-Tech: React · Node.js · Express · MongoDB · Google Gemini AI
+### 🤖 AI-Powered Resume Analysis & Interview Preparation
 
-📸 Screenshots
-Create a plan	Technical questions
-Show Image	Show Image
-Behavioural questions	Preparation road map
-Show Image	Show Image
-💡 What problem does it solve?
+A full-stack AI application that helps students prepare for technical interviews through resume analysis, job-match scoring, technical and behavioral questions, skill-gap identification, and a personalized preparation roadmap.
 
-Most students don't know what an interviewer will ask or what to study for a specific job. This project reads the job description and your resume, compares them, and tells you exactly what to prepare.
+![MERN](https://img.shields.io/badge/MERN-Stack-blue?style=for-the-badge)
+![AI](https://img.shields.io/badge/Generative-AI-purple?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
-✨ Features
-🔐 Sign up / Login with secure JWT authentication
-📄 Upload your resume (PDF) and paste the job description
-📊 Match score showing how well you fit the role
-💻 Technical questions with the interviewer's intention and a model answer
-🗣️ Behavioural questions with STAR-method tips
-⚠️ Skill gaps marked low / medium / high
-🗓️ Day-by-day road map to prepare
-📥 Download a job-tailored resume as PDF
-🕘 Saved history of all your reports
-🛠️ Tech Stack
-Part	Technology
-Frontend	React, Vite, React Router, Axios, SCSS
-Backend	Node.js, Express
-Database	MongoDB (Mongoose)
-AI	Google Gemini API
-Other	JWT, bcrypt, Multer (file upload), pdf-parse, Puppeteer
-⚙️ How It Works
-User logs in and enters a job description + resume.
-Backend reads the text from the resume PDF.
-Gemini AI creates the report in a fixed JSON format (validated with Zod).
-Report is saved in MongoDB and shown on the screen.
-🚀 Run It on Your Computer
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react\&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js\&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?logo=express\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb\&logoColor=white)
+![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
 
-You need: Node.js, a MongoDB Atlas connection string, and a Gemini API key.
+**[🚀 Key Features](#-key-features) · [🏗️ Architecture](#️-system-architecture) · [📸 Screenshots](#-screenshots) · [▶️ Run Locally](#️-run-locally)**
 
-0. Clone the project
-bash
-git clone https://github.com/VaishnaviUbarhande/ai-interview-preparation-platform.git
-cd ai-interview-preparation-platform
-1. Backend
-bash
+</div>
+
+---
+
+## 📑 Table of Contents
+
+1. [About the Project](#-about-the-project)
+2. [Problem Statement](#-problem-statement)
+3. [Key Features](#-key-features)
+4. [System Architecture](#️-system-architecture)
+5. [Tech Stack](#️-tech-stack)
+6. [Screenshots](#-screenshots)
+7. [Project Structure](#-project-structure)
+8. [Run Locally](#️-run-locally)
+9. [API Endpoints](#-api-endpoints)
+10. [Future Improvements](#-future-improvements)
+11. [Author](#-author)
+
+---
+
+## 🎯 About the Project
+
+**AI Interview Preparation Platform** is a full-stack web application designed to make interview preparation easier and more structured for students and job seekers.
+
+The application combines React, Node.js, Express.js, MongoDB, and Google Gemini AI to analyze resumes, evaluate job-description matches, generate interview questions, identify skill gaps, and provide a preparation roadmap.
+
+## 💡 Problem Statement
+
+Students often struggle to identify the skills required for a target role and prepare for interviews in a structured way.
+
+This platform brings several preparation activities into one place:
+
+* 📄 Resume analysis and feedback
+* 🎯 Job-match scoring
+* 💻 Technical interview practice
+* 🗣️ Behavioral interview preparation
+* 📊 Skill-gap identification
+* 🗓️ Personalized preparation roadmap
+
+## 🚀 Key Features
+
+<table>
+<tr>
+<td valign="top" width="50%">
+
+### 📄 Resume Analysis
+
+* AI-powered resume insights
+* Job-description matching
+* Resume relevance assessment
+
+### 💻 Technical Questions
+
+* Role-related technical questions
+* Programming and web-development topics
+* Model answers where available
+
+</td>
+<td valign="top" width="50%">
+
+### 🗣️ Behavioral Questions
+
+* Common behavioral interview questions
+* Question intentions
+* STAR-method guidance
+
+### 📊 Skill Gaps & Roadmap
+
+* Skills requiring improvement
+* Preparation priorities
+* Structured learning roadmap
+
+</td>
+</tr>
+</table>
+
+### 🔐 Authentication and Reports
+
+* User registration and login
+* JWT-based authentication
+* Protected application routes
+* Resume report download as PDF
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    A["👤 User"] --> B["⚛️ React Frontend"]
+    B --> C["🔗 REST API - Axios"]
+    C --> D["⚙️ Node.js + Express"]
+    D --> E[("🍃 MongoDB")]
+    D --> F["🤖 Google Gemini AI"]
+    F --> D
+    D --> B
+    B --> G["📊 Interview Results"]
+    G --> H["💻 Technical Questions"]
+    G --> I["🗣️ Behavioral Questions"]
+    G --> J["🗓️ Preparation Roadmap"]
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Category          | Technologies                            |
+| ----------------- | --------------------------------------- |
+| Frontend          | React.js, JavaScript, HTML5, CSS3, Vite |
+| Backend           | Node.js, Express.js                     |
+| Database          | MongoDB, Mongoose                       |
+| AI Integration    | Google Gemini AI API                    |
+| Authentication    | JWT, HTTP-only cookies                  |
+| API Communication | Axios, REST APIs                        |
+| File Upload       | Multer                                  |
+| Tools             | Git, GitHub, Postman, VS Code           |
+
+---
+
+## 📸 Screenshots
+
+A few screens from the application, showcasing the interview questions and preparation roadmap.
+
+| **💻 Technical Questions**                                        | **🗣️ Behavioral Questions**                                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![Technical Questions](<ia screen short/technical-questions.png>) | ![Behavioral Questions](<ia screen short/behavioral-questions.png>) |
+
+| **🏠 Home Page**                         | **🗓️ Preparation Roadmap**                           |
+| ---------------------------------------- | ----------------------------------------------------- |
+| ![Home Page](<ia screen short/home.png>) | ![Preparation Roadmap](<ia screen short/roadmap.png>) |
+
+> 💡 Keep the `ia screen short/` folder in the same directory as this README when pushing to GitHub.
+
+---
+
+## 📁 Project Structure
+
+```text
+interview-ai-yt/
+├── Backend/
+├── Frontend/
+├── ia screen short/
+│   ├── home.png
+│   ├── technical-questions.png
+│   ├── behavioral-questions.png
+│   └── roadmap.png
+├── .gitignore
+└── README.md
+```
+
+*This is a simplified overview; keep your actual project folders and files unchanged.*
+
+---
+
+## ▶️ Run Locally
+
+### 1. Install backend dependencies
+
+```bash
 cd Backend
 npm install
+```
 
-Create a file named .env inside the Backend folder:
+Create a `Backend/.env` file with your own database connection and Gemini API key, using the exact variable names required by your code.
 
-env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=any_long_random_text
-GOOGLE_GENAI_API_KEY=your_gemini_api_key
+Start the backend using the script configured in `Backend/package.json`. For example:
 
-Start it:
-
-bash
+```bash
 npm run dev
+```
 
-You should see: Server is running on port 3000 and Connected to Database.
+### 2. Install frontend dependencies
 
-2. Frontend (in a new terminal)
-bash
+Open a second terminal:
+
+```bash
 cd Frontend
 npm install
 npm run dev
+```
 
-Open http://localhost:5173 in your browser.
+Open the local frontend URL shown in your terminal, usually `http://localhost:5173`.
 
-🔗 Main API Endpoints
-Method	Endpoint	What it does
-POST	/api/auth/register	Create account
-POST	/api/auth/login	Login
-GET	/api/auth/logout	Logout
-POST	/api/interview	Generate interview report
-GET	/api/interview	Get all my reports
-GET	/api/interview/report/:id	Get one report
-POST	/api/interview/resume/pdf/:id	Download tailored resume
-📚 What I Learned
-Building a full-stack MERN app with login and protected routes
-Using JWT + cookies and blacklisting tokens on logout
-Calling an AI API and forcing a structured JSON reply with a schema
-Uploading and reading PDF files on the server
-Generating PDFs from HTML with Puppeteer
-Debugging real problems like MongoDB connection errors and CORS
-🔮 Future Improvements
-Support DOCX resumes
-Allow reports using only a self-description
-Mock interview mode with feedback on answers
-Deploy the app online
+**Security:** Never commit `.env` files, API keys, or database passwords to GitHub.
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint                             | Purpose                        |
+| ------ | ------------------------------------ | ------------------------------ |
+| POST   | `/api/auth/register`                 | Register a user                |
+| POST   | `/api/auth/login`                    | Log in                         |
+| POST   | `/api/auth/logout`                   | Log out                        |
+| GET    | `/api/auth/get-me`                   | Get the current user's details |
+| POST   | `/api/interview/`                    | Generate an interview report   |
+| GET    | `/api/interview/report/:interviewId` | Retrieve a report              |
+
+*Verify endpoint paths against your actual backend route configuration before publishing.*
+
+---
+
+## 🔮 Future Improvements
+
+* 🎤 Real-time mock interview practice
+* 🎙️ Voice-based question and answer support
+* 📈 Interview preparation progress tracking
+* 🧠 More personalized recommendations
+* 📱 Improved mobile responsiveness
+* 🧪 Expanded automated testing
+
+---
+
+## 👩‍💻 Author
+
+**Vaishnavi Ashok Ubarhande**
+
+B.Tech — Computer Science and Engineering
+Vellore Institute of Technology, Bhopal
+
+GitHub: [VaishnaviUbarhande](https://github.com/VaishnaviUbarhande)
+
+---
+
+<div align="center">
+
+### Built with ❤️ using React, Node.js, Express, MongoDB, and Google Gemini AI
+
+</div>
