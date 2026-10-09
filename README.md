@@ -23,19 +23,7 @@ An AI-powered web application that helps candidates prepare for technical and be
 - **AI Integration:** Google Gemini API
 - **Tools:** Git, GitHub, VS Code, Postman
 
-## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](screenshots/home.png)
-
-### 💻 Technical Questions
-![Technical Questions](screenshots/technical-questions.png)
-
-### 🗣️ Behavioral Questions
-![Behavioral Questions](screenshots/behavioral-questions.png)
-
-### 🗓️ Preparation Roadmap
-![Preparation Roadmap](screenshots/roadmap.png)
 
 ## 📁 Project Structure
 
