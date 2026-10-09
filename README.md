@@ -1,99 +1,76 @@
 # AI Interview Preparation Platform
 
-An AI-powered interview preparation platform that helps users prepare for technical and behavioral interviews through resume analysis, job matching, AI-generated questions, skill-gap identification, and a personalized preparation roadmap.
+An AI-powered web application designed to help candidates prepare for technical and behavioral interviews through resume analysis, job matching, skill-gap identification, and a personalized preparation roadmap.
 
 ## 🚀 Features
 
 * **AI Resume Analysis:** Analyze a resume against a job description.
-* **Job Match Score:** Evaluate how closely a resume matches the target role.
-* **Technical Interview Questions:** Generate technical questions based on the candidate's skills and experience.
-* **Behavioral Interview Questions:** Practice common HR and behavioral interview questions.
+* **Job Match Score:** Understand how well a resume matches a target role.
+* **Technical Interview Questions:** Practice AI-generated technical questions.
+* **Behavioral Interview Questions:** Prepare for HR and behavioral interviews.
 * **Skill Gap Analysis:** Identify skills that need improvement.
-* **Preparation Roadmap:** Get a structured plan to improve interview readiness.
+* **Preparation Roadmap:** Follow a structured interview preparation plan.
 * **User Authentication:** Register and log in securely.
-* **Protected Routes:** Restrict interview features to authenticated users.
-* **AI Integration:** Use the Gemini API to generate interview-related insights.
 * **Resume Upload:** Upload a resume for analysis.
+* **AI Integration:** Generate interview preparation insights using the Gemini API.
+* **Protected Routes:** Restrict access to authenticated users.
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend:** React.js, Vite, JavaScript, HTML5, CSS3, Sass
 
-* React.js
-* Vite
-* JavaScript
-* HTML5
-* CSS3 / Sass
-* Axios
-* React Router
+**Backend:** Node.js, Express.js, REST APIs, JWT Authentication
 
-### Backend
+**Database:** MongoDB, Mongoose
 
-* Node.js
-* Express.js
-* REST APIs
-* JWT Authentication
-* Multer
+**AI Integration:** Google Gemini API
 
-### Database and AI
-
-* MongoDB
-* Mongoose
-* Google Gemini API
-
-### Development Tools
-
-* Git
-* GitHub
-* Visual Studio Code
-* Postman
+**Tools:** Git, GitHub, VS Code, Postman
 
 ## 📸 Screenshots
 
-|               🏠 Home Page               |                       💻 Technical Questions                      |
-| :--------------------------------------: | :---------------------------------------------------------------: |
-| ![Home Page](<ia screen short/home.png>) | ![Technical Questions](<ia screen short/technical-questions.png>) |
+Screenshots of the application, including the home page, technical questions, behavioral questions, and preparation roadmap.
 
-|                       🗣️ Behavioral Questions                      |                🗓️ Preparation Roadmap                |
-| :-----------------------------------------------------------------: | :---------------------------------------------------: |
-| ![Behavioral Questions](<ia screen short/behavioral-questions.png>) | ![Preparation Roadmap](<ia screen short/roadmap.png>) |
+|                  **🏠 Home Page**                 |                         **💻 Technical Questions**                         |
+| :-----------------------------------------------: | :------------------------------------------------------------------------: |
+| ![Home Page](<Frontend/ia screen short/home.png>) | ![Technical Questions](<Frontend/ia screen short/technical-questions.png>) |
+
+|                         **🗣️ Behavioral Questions**                         |                   **🗓️ Preparation Roadmap**                  |
+| :--------------------------------------------------------------------------: | :------------------------------------------------------------: |
+| ![Behavioral Questions](<Frontend/ia screen short/behavioral-questions.png>) | ![Preparation Roadmap](<Frontend/ia screen short/roadmap.png>) |
+
+> 💡 Keep the `ia screen short/` folder inside `Frontend` and upload it to GitHub along with this README so the screenshots display correctly.
 
 ## 📁 Project Structure
 
 ```text
 interview-ai-yt/
 ├── Backend/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── controllers/
 │   ├── package.json
 │   └── server.js
 ├── Frontend/
 │   ├── src/
 │   ├── public/
+│   ├── ia screen short/
+│   │   ├── home.png
+│   │   ├── technical-questions.png
+│   │   ├── behavioral-questions.png
+│   │   └── roadmap.png
 │   ├── package.json
 │   └── index.html
-├── ia screen short/
-│   ├── home.png
-│   ├── technical-questions.png
-│   ├── behavioral-questions.png
-│   └── roadmap.png
 ├── .gitignore
 └── README.md
 ```
 
-*Note: The folder and file names shown above are examples of the expected structure. Keep your actual project structure if it differs.*
+*Note: This is an illustrative structure. Keep your actual project files and folder names if they differ.*
 
-## ⚙️ Prerequisites
+## ⚙️ Installation and Setup
 
-Install the following before running the project:
+### Prerequisites
 
 * Node.js and npm
-* MongoDB database or a MongoDB Atlas connection
+* MongoDB or a MongoDB Atlas database
 * Google Gemini API key
-
-## 💻 Installation and Setup
 
 ### 1. Clone the Repository
 
@@ -111,7 +88,7 @@ cd Backend
 npm install
 ```
 
-Create a `.env` file inside the `Backend` folder and configure the environment variables required by your backend:
+Create a `.env` file inside the `Backend` folder with the environment variables required by your code. For example:
 
 ```env
 PORT=3000
@@ -120,15 +97,9 @@ GOOGLE_GENAI_API_KEY=your_gemini_api_key
 JWT_SECRET=your_secure_random_secret
 ```
 
-Replace the example values with your own credentials. Use the exact environment variable names expected by your code. **Never commit your `.env` file or publish API keys, database credentials, or JWT secrets.**
+Use the exact variable names expected by your backend code. Replace the example values with your own credentials.
 
-Start the backend using the script defined in `Backend/package.json`. If the project uses the `start` script, run:
-
-```bash
-npm start
-```
-
-For a project with a `dev` script, use:
+Start the backend using the command defined in `Backend/package.json`, such as:
 
 ```bash
 npm run dev
@@ -136,44 +107,44 @@ npm run dev
 
 ### 3. Set Up the Frontend
 
-Open a second terminal in VS Code and run:
+Open a second terminal in VS Code:
 
 ```bash
 cd Frontend
 npm install
 ```
 
-If your frontend requires a backend URL environment variable, create `Frontend/.env` with:
+If your frontend uses `VITE_BACKEND_URL`, configure it in `Frontend/.env`:
 
 ```env
 VITE_BACKEND_URL=http://localhost:3000
 ```
 
-Use the variable name expected by your frontend code.
+Use the environment variable name expected by your frontend code.
 
-Start the frontend:
+### 4. Run the Frontend
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed in the terminal, usually `http://localhost:5173`.
+Open the local URL displayed in your terminal, usually `http://localhost:5173`.
 
 ## 🔐 Security
 
-* Keep API keys and database credentials in environment variables.
-* Do not upload `.env` files to GitHub.
-* Use secure authentication and protected routes.
-* Configure CORS for the frontend origin used by your application.
-* Keep `.gitignore` configured to exclude secrets and dependency folders.
+* Store API keys and database credentials in environment variables.
+* Never upload `.env` files or secrets to GitHub.
+* Configure CORS for your frontend URL.
+* Protect API endpoints that require authentication.
+* Keep database credentials private.
 
 ## 🔮 Future Improvements
 
-* Add mock interview sessions with answer evaluation.
+* Add interactive mock interview sessions.
 * Improve resume-to-job-description matching.
-* Provide progress tracking for interview preparation.
-* Add more detailed skill recommendations.
-* Enhance the user dashboard and reporting features.
+* Track interview preparation progress.
+* Provide more personalized skill recommendations.
+* Enhance the dashboard and interview reports.
 
 ## 👩‍💻 Author
 
@@ -183,4 +154,4 @@ Computer Science and Engineering Student
 
 ## 📄 License
 
-This project is available for educational and learning purposes. Add a license file if you intend to distribute it under a specific open-source license.
+This project is intended for educational and learning purposes. Add a `LICENSE` file if you choose a specific open-source license.
