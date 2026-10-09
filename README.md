@@ -1,76 +1,78 @@
 # AI Interview Preparation Platform
 
-An AI-powered web application designed to help candidates prepare for technical and behavioral interviews through resume analysis, job matching, skill-gap identification, and a personalized preparation roadmap.
+An AI-powered web application that helps candidates prepare for technical and behavioral interviews through resume analysis, job matching, skill-gap identification, and a personalized preparation roadmap.
 
 ## 🚀 Features
 
-* **AI Resume Analysis:** Analyze a resume against a job description.
-* **Job Match Score:** Understand how well a resume matches a target role.
-* **Technical Interview Questions:** Practice AI-generated technical questions.
-* **Behavioral Interview Questions:** Prepare for HR and behavioral interviews.
-* **Skill Gap Analysis:** Identify skills that need improvement.
-* **Preparation Roadmap:** Follow a structured interview preparation plan.
-* **User Authentication:** Register and log in securely.
-* **Resume Upload:** Upload a resume for analysis.
-* **AI Integration:** Generate interview preparation insights using the Gemini API.
-* **Protected Routes:** Restrict access to authenticated users.
+- **AI Resume Analysis:** Analyze a resume against a job description.
+- **Job Match Score:** See how well your profile matches a target role.
+- **Technical Interview Questions:** Practice AI-generated technical questions with model answers.
+- **Behavioral Interview Questions:** Prepare for HR and behavioral rounds (STAR method).
+- **Skill Gap Analysis:** Identify skills that need improvement, with severity levels.
+- **Preparation Roadmap:** Follow a day-by-day interview preparation plan.
+- **Resume Download:** Generate a tailored resume PDF for the role.
+- **User Authentication:** Register and log in securely with JWT.
+- **Protected Routes:** Restrict access to authenticated users.
+- **AI Integration:** Insights generated with the Google Gemini API.
 
 ## 🛠️ Tech Stack
 
-**Frontend:** React.js, Vite, JavaScript, HTML5, CSS3, Sass
-
-**Backend:** Node.js, Express.js, REST APIs, JWT Authentication
-
-**Database:** MongoDB, Mongoose
-
-**AI Integration:** Google Gemini API
-
-**Tools:** Git, GitHub, VS Code, Postman
+- **Frontend:** React.js, Vite, JavaScript, HTML5, CSS3, Sass
+- **Backend:** Node.js, Express.js, REST APIs, JWT Authentication
+- **Database:** MongoDB, Mongoose
+- **AI Integration:** Google Gemini API
+- **Tools:** Git, GitHub, VS Code, Postman
 
 ## 📸 Screenshots
 
-Screenshots of the application, including the home page, technical questions, behavioral questions, and preparation roadmap.
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
 
-|                  **🏠 Home Page**                 |                         **💻 Technical Questions**                         |
-| :-----------------------------------------------: | :------------------------------------------------------------------------: |
-| ![Home Page](<Frontend/ia screen short/home.png>) | ![Technical Questions](<Frontend/ia screen short/technical-questions.png>) |
+### 💻 Technical Questions
+![Technical Questions](screenshots/technical-questions.png)
 
-|                         **🗣️ Behavioral Questions**                         |                   **🗓️ Preparation Roadmap**                  |
-| :--------------------------------------------------------------------------: | :------------------------------------------------------------: |
-| ![Behavioral Questions](<Frontend/ia screen short/behavioral-questions.png>) | ![Preparation Roadmap](<Frontend/ia screen short/roadmap.png>) |
+### 🗣️ Behavioral Questions
+![Behavioral Questions](screenshots/behavioral-questions.png)
 
-> 💡 Keep the `ia screen short/` folder inside `Frontend` and upload it to GitHub along with this README so the screenshots display correctly.
+### 🗓️ Preparation Roadmap
+![Preparation Roadmap](screenshots/roadmap.png)
 
 ## 📁 Project Structure
 
-```text
+```
 interview-ai-yt/
 ├── Backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middlewares/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── app.js
 │   ├── package.json
 │   └── server.js
 ├── Frontend/
 │   ├── src/
 │   ├── public/
-│   ├── ia screen short/
-│   │   ├── home.png
-│   │   ├── technical-questions.png
-│   │   ├── behavioral-questions.png
-│   │   └── roadmap.png
 │   ├── package.json
 │   └── index.html
+├── screenshots/
+│   ├── home.png
+│   ├── technical-questions.png
+│   ├── behavioral-questions.png
+│   └── roadmap.png
 ├── .gitignore
 └── README.md
 ```
-
-*Note: This is an illustrative structure. Keep your actual project files and folder names if they differ.*
 
 ## ⚙️ Installation and Setup
 
 ### Prerequisites
 
-* Node.js and npm
-* MongoDB or a MongoDB Atlas database
-* Google Gemini API key
+- Node.js 20.16+ (or 22+) and npm
+- MongoDB or a MongoDB Atlas database
+- Google Gemini API key
 
 ### 1. Clone the Repository
 
@@ -79,8 +81,6 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 cd interview-ai-yt
 ```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
-
 ### 2. Set Up the Backend
 
 ```bash
@@ -88,68 +88,52 @@ cd Backend
 npm install
 ```
 
-Create a `.env` file inside the `Backend` folder with the environment variables required by your code. For example:
+Create a `.env` file inside the `Backend` folder:
 
 ```env
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-GOOGLE_GENAI_API_KEY=your_gemini_api_key
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secure_random_secret
+GOOGLE_GENAI_API_KEY=your_gemini_api_key
 ```
 
-Use the exact variable names expected by your backend code. Replace the example values with your own credentials.
-
-Start the backend using the command defined in `Backend/package.json`, such as:
+Start the backend:
 
 ```bash
 npm run dev
 ```
 
-### 3. Set Up the Frontend
+The server runs on `http://localhost:3000`.
 
-Open a second terminal in VS Code:
+### 3. Set Up and Run the Frontend
+
+Open a second terminal:
 
 ```bash
 cd Frontend
 npm install
-```
-
-If your frontend uses `VITE_BACKEND_URL`, configure it in `Frontend/.env`:
-
-```env
-VITE_BACKEND_URL=http://localhost:3000
-```
-
-Use the environment variable name expected by your frontend code.
-
-### 4. Run the Frontend
-
-```bash
 npm run dev
 ```
 
-Open the local URL displayed in your terminal, usually `http://localhost:5173`.
+Open the URL shown in the terminal, usually `http://localhost:5173`.
 
 ## 🔐 Security
 
-* Store API keys and database credentials in environment variables.
-* Never upload `.env` files or secrets to GitHub.
-* Configure CORS for your frontend URL.
-* Protect API endpoints that require authentication.
-* Keep database credentials private.
+- Store API keys and database credentials in environment variables.
+- Never upload `.env` files or secrets to GitHub.
+- Configure CORS for your frontend URL.
+- Protect API endpoints that require authentication.
 
 ## 🔮 Future Improvements
 
-* Add interactive mock interview sessions.
-* Improve resume-to-job-description matching.
-* Track interview preparation progress.
-* Provide more personalized skill recommendations.
-* Enhance the dashboard and interview reports.
+- Interactive mock interview sessions.
+- Better resume-to-job-description matching.
+- Progress tracking for interview preparation.
+- More personalized skill recommendations.
+- Enhanced dashboard and interview reports.
 
 ## 👩‍💻 Author
 
 **Vaishnavi Ashok Ubarhande**
-
 Computer Science and Engineering Student
 
 ## 📄 License
