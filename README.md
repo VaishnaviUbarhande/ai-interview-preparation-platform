@@ -19,20 +19,19 @@ An AI-powered web application that helps candidates prepare for technical and be
 
 ### 🏠 Home Page
 
-![Home Page](./screenshots/home.png)
+![Home Page](https://raw.githubusercontent.com/VaishnaviUbarhande/ai-interview-preparation-platform/main/screenshots/home.png)
 
 ### 💻 Technical Interview Questions
 
-![Technical Questions](./screenshots/technical-questions.png)
+![Technical Interview Questions](https://raw.githubusercontent.com/VaishnaviUbarhande/ai-interview-preparation-platform/main/screenshots/technical-questions.png)
 
 ### 🗣️ Behavioral Interview Questions
 
-![Behavioral Questions](./screenshots/behavioral-questions.png)
+![Behavioral Interview Questions](https://raw.githubusercontent.com/VaishnaviUbarhande/ai-interview-preparation-platform/main/screenshots/behavioral-questions.png)
 
 ### 🗺️ Preparation Roadmap
 
-![Preparation Roadmap](./screenshots/roadmap.png)
-
+![Preparation Roadmap](https://raw.githubusercontent.com/VaishnaviUbarhande/ai-interview-preparation-platform/main/screenshots/roadmap.png)
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, Vite, JavaScript, HTML5, CSS3, Sass
