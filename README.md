@@ -4,7 +4,7 @@ An AI-powered platform designed to help users prepare for job interviews with pe
 
 ## Features
 
-<<<<<<< HEAD
+
 - Personalized interview preparation
 - Technical interview questions
 - Behavioral interview questions
@@ -39,7 +39,7 @@ An AI-powered platform designed to help users prepare for job interviews with pe
 =======
 ## 📁 Project Structure
 
-```text
+text
 interview-ai-yt/
 ├── Backend/
 │   ├── src/
@@ -64,8 +64,8 @@ interview-ai-yt/
 │   └── roadmap.png
 ├── .gitignore
 └── README.md
-```
->>>>>>> d1c2e3af784baaf05682068800d458f927035429
+
+
 
 ## Security
 
@@ -145,4 +145,4 @@ Computer Science and Engineering Student
 ## 📄 License
 
 This project is intended for educational and learning purposes. Add a `LICENSE` file if you choose a specific open-source license.
->>>>>>> d1c2e3af784baaf05682068800d458f927035429
+
