@@ -7,13 +7,31 @@ An AI-powered web application that helps candidates prepare for technical and be
 - **AI Resume Analysis:** Analyze a resume against a job description.
 - **Job Match Score:** See how well your profile matches a target role.
 - **Technical Interview Questions:** Practice AI-generated technical questions with model answers.
-- **Behavioral Interview Questions:** Prepare for HR and behavioral rounds (STAR method).
+- **Behavioral Interview Questions:** Prepare for HR and behavioral rounds using the STAR method.
 - **Skill Gap Analysis:** Identify skills that need improvement, with severity levels.
 - **Preparation Roadmap:** Follow a day-by-day interview preparation plan.
 - **Resume Download:** Generate a tailored resume PDF for the role.
 - **User Authentication:** Register and log in securely with JWT.
 - **Protected Routes:** Restrict access to authenticated users.
 - **AI Integration:** Insights generated with the Google Gemini API.
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](./screenshots/home.png)
+
+### 💻 Technical Interview Questions
+
+![Technical Questions](./screenshots/technical-questions.png)
+
+### 🗣️ Behavioral Interview Questions
+
+![Behavioral Questions](./screenshots/behavioral-questions.png)
+
+### 🗺️ Preparation Roadmap
+
+![Preparation Roadmap](./screenshots/roadmap.png)
 
 ## 🛠️ Tech Stack
 
@@ -23,11 +41,9 @@ An AI-powered web application that helps candidates prepare for technical and be
 - **AI Integration:** Google Gemini API
 - **Tools:** Git, GitHub, VS Code, Postman
 
-
-
 ## 📁 Project Structure
 
-```
+```text
 interview-ai-yt/
 ├── Backend/
 │   ├── src/
@@ -58,15 +74,16 @@ interview-ai-yt/
 
 ### Prerequisites
 
-- Node.js 20.16+ (or 22+) and npm
+- Node.js 20.16+ or 22+
+- npm
 - MongoDB or a MongoDB Atlas database
 - Google Gemini API key
 
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd interview-ai-yt
+git clone https://github.com/VaishnaviUbarhande/ai-interview-preparation-platform.git
+cd ai-interview-preparation-platform
 ```
 
 ### 2. Set Up the Backend
@@ -76,7 +93,7 @@ cd Backend
 npm install
 ```
 
-Create a `.env` file inside the `Backend` folder:
+Create a `.env` file inside the `Backend` folder with the following variables:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -84,17 +101,17 @@ JWT_SECRET=your_secure_random_secret
 GOOGLE_GENAI_API_KEY=your_gemini_api_key
 ```
 
-Start the backend:
+Start the backend server:
 
 ```bash
 npm run dev
 ```
 
-The server runs on `http://localhost:3000`.
+The backend server runs at `http://localhost:3000`.
 
 ### 3. Set Up and Run the Frontend
 
-Open a second terminal:
+Open a **second terminal** in VS Code and run:
 
 ```bash
 cd Frontend
@@ -102,19 +119,19 @@ npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal, usually `http://localhost:5173`.
+Open the local URL displayed in the terminal, usually `http://localhost:5173`.
 
 ## 🔐 Security
 
 - Store API keys and database credentials in environment variables.
 - Never upload `.env` files or secrets to GitHub.
-- Configure CORS for your frontend URL.
+- Configure CORS to allow your frontend URL.
 - Protect API endpoints that require authentication.
 
 ## 🔮 Future Improvements
 
 - Interactive mock interview sessions.
-- Better resume-to-job-description matching.
+- Improved resume-to-job-description matching.
 - Progress tracking for interview preparation.
 - More personalized skill recommendations.
 - Enhanced dashboard and interview reports.
@@ -122,6 +139,7 @@ Open the URL shown in the terminal, usually `http://localhost:5173`.
 ## 👩‍💻 Author
 
 **Vaishnavi Ashok Ubarhande**
+
 Computer Science and Engineering Student
 
 ## 📄 License
