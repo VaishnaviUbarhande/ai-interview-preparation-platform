@@ -1,45 +1,62 @@
 # AI Interview Preparation Platform
 
-An AI-powered platform designed to help users prepare for job interviews with personalized questions, skill-gap analysis, and a preparation roadmap.
+An AI-powered full-stack web application designed to help students and job seekers prepare for technical and behavioral interviews. The platform analyzes resumes against job descriptions, evaluates job-role alignment, identifies skill gaps, generates interview questions, and creates a personalized preparation roadmap using the Google Gemini API.
 
-## Features
+## 🚀 Key Features
 
+- **AI-Powered Resume Analysis:** Analyze an uploaded resume against a target job description.
+- **Job Match Score:** Get an indication of how closely a resume aligns with a target role.
+- **Technical Interview Preparation:** Generate role-relevant technical questions and model answers.
+- **Behavioral Interview Preparation:** Practice HR and behavioral questions using the STAR method.
+- **Skill Gap Analysis:** Identify missing or underdeveloped skills and prioritize areas for improvement.
+- **Personalized Preparation Roadmap:** Follow a structured, day-by-day plan based on identified skill gaps.
+- **Resume PDF Generation:** Generate and download a tailored resume report.
+- **Secure User Authentication:** Support registration and login using JWT-based authentication.
+- **Protected Routes:** Restrict access to authorized users.
+- **AI Integration:** Use the Google Gemini API to generate personalized interview preparation insights.
 
-- Personalized interview preparation
-- Technical interview questions
-- Behavioral interview questions
-- Skill-gap analysis
-- Preparation roadmap
-- JWT-based authentication
-- Google Gemini AI integration
-## 📸 Screenshots
+## 📸 Application Screenshots
 
 ### 🏠 Home Page
+
 ![Home Page](./screenshots/home.png)
 
 ### 💻 Technical Interview Questions
-![Technical Questions](./screenshots/technical-questions.png)
+
+![Technical Interview Questions](./screenshots/technical-questions.png)
 
 ### 🗣️ Behavioral Interview Questions
-![Behavioral Questions](./screenshots/behavioral-questions.png)
 
-### 🗺️ Preparation Roadmap
+![Behavioral Interview Questions](./screenshots/behavioral-questions.png)
+
+### 🗺️ Personalized Preparation Roadmap
+
 ![Preparation Roadmap](./screenshots/roadmap.png)
 
-## Tech Stack
+## 🛠️ Technology Stack
 
-- React.js
-- Node.js
-- Express.js
-- MongoDB
-- JavaScript, HTML, and CSS
-- JWT Authentication
-- Google Gemini API
-- Git and GitHub
-=======
-## 📁 Project Structure
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, Vite, JavaScript, HTML5, CSS3, Sass |
+| Backend | Node.js, Express.js |
+| API Development | REST APIs |
+| Database | MongoDB, Mongoose |
+| Authentication | JSON Web Tokens (JWT) |
+| AI Integration | Google Gemini API |
+| Development Tools | Git, GitHub, VS Code, Postman |
 
-text
+## 🏗️ System Architecture
+
+The application follows a client-server architecture:
+
+1. **Frontend:** React.js provides the user interface for authentication, resume submission, interview preparation, and viewing reports.
+2. **Backend:** Node.js and Express.js handle API requests, authentication, resume processing, and interview preparation workflows.
+3. **Database:** MongoDB stores application data, user information, and interview reports.
+4. **AI Service:** The Google Gemini API supports the generation of interview questions and personalized preparation insights.
+
+## 📂 Project Structure
+
+```text
 interview-ai-yt/
 ├── Backend/
 │   ├── src/
@@ -64,20 +81,16 @@ interview-ai-yt/
 │   └── roadmap.png
 ├── .gitignore
 └── README.md
+```
 
+## ⚙️ Installation and Setup
 
-
-## Security
-
-<<<<<<< HEAD
-Keep API keys, database credentials, and `.env` files private. Never commit secrets to GitHub.
-=======
 ### Prerequisites
 
-- Node.js 20.16+ or 22+
-- npm
-- MongoDB or a MongoDB Atlas database
+- Node.js and npm
+- MongoDB or a MongoDB Atlas account
 - Google Gemini API key
+- Git
 
 ### 1. Clone the Repository
 
@@ -86,14 +99,14 @@ git clone https://github.com/VaishnaviUbarhande/ai-interview-preparation-platfor
 cd ai-interview-preparation-platform
 ```
 
-### 2. Set Up the Backend
+### 2. Configure the Backend
 
 ```bash
 cd Backend
 npm install
 ```
 
-Create a `.env` file inside the `Backend` folder with the following variables:
+Create a `.env` file in the `Backend` directory:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -107,11 +120,13 @@ Start the backend server:
 npm run dev
 ```
 
-The backend server runs at `http://localhost:3000`.
+The backend is configured to run at:
 
-### 3. Set Up and Run the Frontend
+`http://localhost:3000`
 
-Open a **second terminal** in VS Code and run:
+### 3. Configure the Frontend
+
+Open a second terminal at the project root and run:
 
 ```bash
 cd Frontend
@@ -119,30 +134,48 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed in the terminal, usually `http://localhost:5173`.
+Open the local URL printed in the terminal. With the default Vite configuration, this is usually:
 
-## 🔐 Security
+`http://localhost:5173`
 
-- Store API keys and database credentials in environment variables.
-- Never upload `.env` files or secrets to GitHub.
-- Configure CORS to allow your frontend URL.
-- Protect API endpoints that require authentication.
+**Note:** Keep the backend running while using the frontend. Ensure that the backend CORS configuration allows the frontend's actual local URL.
 
-## 🔮 Future Improvements
+## 🔐 Security Considerations
+
+- Store database credentials and API keys in environment variables.
+- Do not commit `.env` files or other secrets to GitHub.
+- Use JWT authentication for protected application routes.
+- Configure CORS for trusted frontend origins.
+- Validate uploaded files and incoming API requests.
+
+## 🎯 Learning Outcomes
+
+This project provides practical experience with:
+
+- Full-stack web application development.
+- Building and integrating REST APIs.
+- Database modeling and MongoDB integration.
+- JWT-based authentication and route protection.
+- Integrating a generative AI API into a web application.
+- Handling resume uploads and generating interview preparation reports.
+- Using Git and GitHub for version control and project documentation.
+
+## 🔮 Future Enhancements
 
 - Interactive mock interview sessions.
-- Improved resume-to-job-description matching.
-- Progress tracking for interview preparation.
-- More personalized skill recommendations.
-- Enhanced dashboard and interview reports.
+- Speech-based interview practice.
+- Interview performance tracking and analytics.
+- Improved resume and job-description matching.
+- More adaptive preparation recommendations.
 
 ## 👩‍💻 Author
 
 **Vaishnavi Ashok Ubarhande**
 
-Computer Science and Engineering Student
+Final-Year Computer Science and Engineering Student
+
+GitHub: [VaishnaviUbarhande](https://github.com/VaishnaviUbarhande)
 
 ## 📄 License
 
-This project is intended for educational and learning purposes. Add a `LICENSE` file if you choose a specific open-source license.
-
+This project was developed for educational and learning purposes. Unless a license is added to the repository, all rights remain with the copyright holder.
